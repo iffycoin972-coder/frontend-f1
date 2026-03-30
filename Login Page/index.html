@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoMarket - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card left-card" aria-label="AutoMarket intro">
+      <h1 class="brand">AutoMarket</h1>
+      <p class="tagline">Find your next car with confidence.</p>
+
+      <!-- Car Image -->
+      <div class="car-wrap">
+        <img class="car-img" src="car.png" alt="Car illustration" />
+      </div>
+
+      <ul class="bullets">
+        <li>Browse used cars by make, model, and price</li>
+        <li>Save favorites and contact sellers</li>
+        <li>Secure sign in for buyers and sellers</li>
+      </ul>
+    </section>
+
+    <section class="card right-card" aria-label="Login form">
+      <h2 class="login-title">Login</h2>
+      <p class="login-sub">Welcome back to AutoMarket</p>
+
+      <form id="loginForm" class="form" novalidate>
+        <label class="label" for="email">Email</label>
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="name@example.com"
+          autocomplete="email"
+        />
+        <p class="error" id="emailError"></p>
+
+        <label class="label" for="password">Password</label>
+        <div class="password-row">
+          <input
+            class="input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••••"
+            autocomplete="current-password"
+          />
+          <button type="button" class="toggle" id="togglePw">Show</button>
+        </div>
+        <p class="error" id="passwordError"></p>
+
+        <button class="btn" type="submit">Sign In</button>
+
+        <div class="links">
+          <p class="muted">New user? <a href="#" id="createAccount">Create an account</a></p>
+          <a href="#" class="small" id="forgotPassword">Forgot password?</a>
+        </div>
+
+        <p class="success" id="successMsg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
