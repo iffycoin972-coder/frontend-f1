@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoMarket - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="home.html">
+  <img src="logo.png" alt="AutoMarket Logo" class="logo-img">
+</a>
+
+      <nav class="nav-center">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="#">Inventory</a>
+        <a class="nav-link" href="#">Financing</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" type="button">More ▾</button>
+          <div class="dropdown-menu">
+            <a href="home.html#questions">Questions</a>
+            <a href="home.html#contact">Contact</a>
+            <a href="#">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn btn-light" href="index.html">Sign In</a>
+        <a class="btn btn-primary" href="#">Browse</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="container">
+      <div class="auth-box">
+        <h1>Sign In</h1>
+        <p>Welcome back to AutoMarket</p>
+
+        <form id="loginForm">
+          <label class="label" for="email">Email</label>
+          <input class="input" id="email" type="email" placeholder="name@example.com" />
+
+          <label class="label" for="password">Password</label>
+          <input class="input" id="password" type="password" placeholder="••••••••••" />
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Sign In</button>
+            <a class="btn btn-outline" href="register.html">Register</a>
+          </div>
+
+          <div class="auth-links">
+            <a href="#" id="forgot">Forgot password?</a>
+            <a href="home.html">Back to home</a>
+          </div>
+
+          <div class="msg error" id="loginErr"></div>
+          <div class="msg ok" id="loginOk"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const err = document.getElementById("loginErr");
+      const ok = document.getElementById("loginOk");
+
+      err.textContent = "";
+      ok.textContent = "";
+
+      if(email === "" || !email.includes("@")){
+        err.textContent = "Please enter a valid email.";
+        return;
+      }
+      if(pass.length < 6){
+        err.textContent = "Password must be at least 6 characters.";
+        return;
+      }
+
+      ok.textContent = "Login successful (demo). Redirecting...";
+      setTimeout(()=>{ window.location.href = "home.html"; }, 600);
+    });
+
+    document.getElementById("forgot").addEventListener("click", function(e){
+      e.preventDefault();
+      alert("Front-end only: password reset will be added later.");
+    });
+  </script>
+</body>
+</html>
