@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoMarket | Sign In</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="home.html" aria-label="AutoMarket Home">
+      <img class="brand-logo" src="logo.png" alt="AutoMarket logo" />
+    </a>
+
+    <nav class="nav-center" aria-label="Primary">
+      <a href="home.html" >Home</a>
+      <a href="inventory.html" >Inventory</a>
+      <a href="financing.html" >Financing</a>
+
+      <div class="dropdown">
+        <a class="dropdown-toggle" href="#" onclick="return false;">More <span style="font-size:12px;">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="home.html#contact">Contact</a>
+          <a href="home.html#faq">FAQ</a>
+          <a href="dealer.html">Dealer Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
+      <span class="btn btn-ghost" id="navUserChip" style="display:none; cursor:default;"></span>
+      <a class="btn btn-ghost" id="navSignIn" href="index.html">Sign In</a>
+      <a class="btn btn-ghost" id="navRegister" href="register.html">Register</a>
+      <button class="btn btn-ghost" id="navLogout" type="button" style="display:none;">Logout</button>
+      <a class="btn btn-primary" href="inventory.html">Browse</a>
+    </div>
+  </div>
+</header>
+<main class="page-bg">
+  <div class="auth-shell">
+    <section class="auth-left">
+      <div>
+        <h1>AutoMarket</h1>
+        <p>Find your next car with confidence.</p>
+        <ul class="auth-bullets">
+          <li>Browse used cars by make, model, price, and VIN</li>
+          <li>Save favorites in your cart (even as a guest)</li>
+          <li>Leave reviews for dealers as a customer</li>
+        </ul>
+      </div>
+      <div class="small" style="color:rgba(255,255,255,.85);">
+        Tip: For this milestone, sign-in is simulated with localStorage.
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <h2>Login</h2>
+      <p>Welcome back to AutoMarket</p>
+
+      <form class="form" id="loginForm">
+        <label class="label" for="loginEmail">Email</label>
+        <input class="input" id="loginEmail" type="email" placeholder="name@example.com" required>
+
+        <label class="label" for="loginPassword">Password</label>
+        <input class="input" id="loginPassword" type="password" placeholder="••••••••••" required>
+
+        <button class="btn btn-primary" type="submit" style="margin-top:6px;">Sign In</button>
+
+        <div class="form-actions">
+          <span class="small">New user? <a class="btn-link" href="register.html">Create an account</a></span>
+          <a class="btn-link" href="#" onclick="alert('Demo only. Add real reset later.'); return false;">Forgot password?</a>
+        </div>
+
+        <div class="msg" id="loginMsg"></div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<script src="auth.js"></script>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.png" alt="AutoMarket logo">
+        <div>
+          <div style="font-weight:950;">AutoMarket</div>
+          <div class="small">© AutoMarket. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="financing.html">Financing</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <span class="small">X</span>
+      <span class="small">IG</span>
+      <span class="small">YT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

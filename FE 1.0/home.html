@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoMarket | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="home.html" aria-label="AutoMarket Home">
+      <img class="brand-logo" src="logo.png" alt="AutoMarket logo" />
+    </a>
+
+    <nav class="nav-center" aria-label="Primary">
+      <a href="home.html" style="opacity:1;">Home</a>
+      <a href="inventory.html" >Inventory</a>
+      <a href="financing.html" >Financing</a>
+
+      <div class="dropdown">
+        <a class="dropdown-toggle" href="#" onclick="return false;">More <span style="font-size:12px;">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="home.html#contact">Contact</a>
+          <a href="home.html#faq">FAQ</a>
+          <a href="dealer.html">Dealer Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
+      <span class="btn btn-ghost" id="navUserChip" style="display:none; cursor:default;"></span>
+      <a class="btn btn-ghost" id="navSignIn" href="index.html">Sign In</a>
+      <a class="btn btn-ghost" id="navRegister" href="register.html">Register</a>
+      <button class="btn btn-ghost" id="navLogout" type="button" style="display:none;">Logout</button>
+      <a class="btn btn-primary" href="inventory.html">Browse</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box" role="img" aria-label="AutoMarket hero image">
+        <div class="hero-content">
+          <div>
+            <h1 class="hero-title">Find your next car here</h1>
+            <p class="hero-text">
+              AutoMarket brings you quality vehicles at honest prices. We believe in simple deals and straightforward service.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-ghost" href="inventory.html">Browse</a>
+              <a class="btn btn-dark" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-sm">
+        <div class="section-subtitle" style="margin-top:40px;">
+          <div style="font-weight:850; letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#475467;">Quality</div>
+          <h2 class="section-title" style="margin-top:10px;">Vehicles that matter</h2>
+          <p class="section-subtitle">Every car is inspected and ready for the road.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <img class="card-media" src="card1.jpg" alt="Selection">
+            <div class="card-body">
+              <div class="card-kicker">Selection</div>
+              <div class="card-title">Wide range of makes and models</div>
+              <p class="card-text">Browse by make, model, year, and VIN. Find the right fit fast.</p>
+              <div class="card-actions">
+                <a class="btn btn-link" href="inventory.html">Explore →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-media" src="card2.jpg" alt="Pricing">
+            <div class="card-body">
+              <div class="card-kicker">Pricing</div>
+              <div class="card-title">Honest prices without the games</div>
+              <p class="card-text">Clear pricing and simple deals. No confusing extras.</p>
+              <div class="card-actions">
+                <a class="btn btn-link" href="inventory.html">Learn →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-media" src="card3.jpg" alt="Warranty">
+            <div class="card-body">
+              <div class="card-kicker">Confidence</div>
+              <div class="card-title">Backed by warranty and thorough inspection</div>
+              <p class="card-text">We take quality seriously so you can buy with confidence.</p>
+              <div class="card-actions">
+                <a class="btn btn-link" href="home.html#faq">Read FAQ →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-subtitle">
+            <div style="font-weight:850; letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#475467;">Featured</div>
+            <h2 class="section-title" style="margin-top:10px;">Cars ready now</h2>
+            <p class="section-subtitle">Hand-picked inventory updated regularly.</p>
+          </div>
+
+          <div class="featured">
+            <div class="featured-content">
+              <div class="pill">Featured vehicle</div>
+              <h3 style="margin-top:12px;">Performance meets comfort</h3>
+              <p>Check out our latest listings. Add to cart to save your favorites, even if you’re browsing as a guest.</p>
+              <div class="featured-actions">
+                <a class="btn btn-primary" href="inventory.html">View inventory</a>
+                <a class="btn btn-ghost" href="cart.html">Go to cart</a>
+              </div>
+            </div>
+            <img class="featured-media" src="featured.jpg" alt="Featured car">
+          </div>
+        </div>
+
+        <div class="section-sm">
+          <div class="section-subtitle">
+            <div style="font-weight:850; letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#475467;">Community</div>
+            <h2 class="section-title" style="margin-top:10px;">Real stories</h2>
+            <p class="section-subtitle">What customers are saying about AutoMarket.</p>
+          </div>
+
+          <div class="testimonials">
+            <div class="quote">
+              <div class="stars">★★★★★</div>
+              <p>“Super easy buying process and the car was exactly as described.”</p>
+              <div class="who">— Alex M.</div>
+            </div>
+            <div class="quote">
+              <div class="stars">★★★★★</div>
+              <p>“Transparent pricing. No pressure. Loved the experience.”</p>
+              <div class="who">— Maria S.</div>
+            </div>
+            <div class="quote">
+              <div class="stars">★★★★☆</div>
+              <p>“Great inventory and quick responses. Would buy again.”</p>
+              <div class="who">— Kevin R.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="faq">
+          <div class="section-subtitle">
+            <div style="font-weight:850; letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#475467;">Questions</div>
+            <h2 class="section-title" style="margin-top:10px;">FAQ</h2>
+          </div>
+
+          <div class="faq">
+            <div class="faq-item">
+              <div class="faq-q">Can I shop without an account? <span class="small">+</span></div>
+              <div class="faq-a">Yes. Your cart saves in your browser even if you’re not signed in.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">How do dealer reviews work? <span class="small">+</span></div>
+              <div class="faq-a">Customers can leave reviews on a dealer through the car details page.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can I search by VIN? <span class="small">+</span></div>
+              <div class="faq-a">Yes. Use the Inventory page search bar or the VIN decoder tool.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Is checkout real? <span class="small">+</span></div>
+              <div class="faq-a">For now it’s a front-end demo. Later you’ll connect to your backend payment flow.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="contact">
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-subtitle">We’re here for answers, questions, and help with your next car.</p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon">✉️</div>
+              <h4>Email</h4>
+              <p>support@automarket.example</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📞</div>
+              <h4>Phone</h4>
+              <p>+1 (848) 247-9336</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <h4>Office</h4>
+              <p>323 Dr. Martin Luther King Jr Blvd, Newark, NJ</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="home.js"></script>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.png" alt="AutoMarket logo">
+        <div>
+          <div style="font-weight:950;">AutoMarket</div>
+          <div class="small">© AutoMarket. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="financing.html">Financing</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <span class="small">X</span>
+      <span class="small">IG</span>
+      <span class="small">YT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

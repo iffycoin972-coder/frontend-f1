@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoMarket | Financing</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="home.html" aria-label="AutoMarket Home">
+      <img class="brand-logo" src="logo.png" alt="AutoMarket logo" />
+    </a>
+
+    <nav class="nav-center" aria-label="Primary">
+      <a href="home.html" >Home</a>
+      <a href="inventory.html" >Inventory</a>
+      <a href="financing.html" style="opacity:1;">Financing</a>
+
+      <div class="dropdown">
+        <a class="dropdown-toggle" href="#" onclick="return false;">More <span style="font-size:12px;">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="home.html#contact">Contact</a>
+          <a href="home.html#faq">FAQ</a>
+          <a href="dealer.html">Dealer Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
+      <span class="btn btn-ghost" id="navUserChip" style="display:none; cursor:default;"></span>
+      <a class="btn btn-ghost" id="navSignIn" href="index.html">Sign In</a>
+      <a class="btn btn-ghost" id="navRegister" href="register.html">Register</a>
+      <button class="btn btn-ghost" id="navLogout" type="button" style="display:none;">Logout</button>
+      <a class="btn btn-primary" href="inventory.html">Browse</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin:0; font-size:44px; font-weight:950;">Financing</h1>
+      <p class="section-subtitle" style="text-align:left; margin:10px 0 0;">
+        Placeholder page for the full project. Connect to backend or add content later.
+      </p>
+
+      <div class="detail-card" style="margin-top:18px;">
+        <h3 style="margin:0; font-weight:950;">What to add later</h3>
+        <ul class="small" style="line-height:1.9;">
+          <li>Financing application form</li>
+          <li>Rate estimates</li>
+          <li>Backend endpoint to submit applications</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.png" alt="AutoMarket logo">
+        <div>
+          <div style="font-weight:950;">AutoMarket</div>
+          <div class="small">© AutoMarket. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="financing.html">Financing</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <span class="small">X</span>
+      <span class="small">IG</span>
+      <span class="small">YT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

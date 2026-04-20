@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoMarket | Inventory</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<header class="header">
+  <div class="container navbar">
+    <a class="brand" href="home.html" aria-label="AutoMarket Home">
+      <img class="brand-logo" src="logo.png" alt="AutoMarket logo" />
+    </a>
+
+    <nav class="nav-center" aria-label="Primary">
+      <a href="home.html" >Home</a>
+      <a href="inventory.html" style="opacity:1;">Inventory</a>
+      <a href="financing.html" >Financing</a>
+
+      <div class="dropdown">
+        <a class="dropdown-toggle" href="#" onclick="return false;">More <span style="font-size:12px;">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="home.html#contact">Contact</a>
+          <a href="home.html#faq">FAQ</a>
+          <a href="dealer.html">Dealer Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
+      <span class="btn btn-ghost" id="navUserChip" style="display:none; cursor:default;"></span>
+      <a class="btn btn-ghost" id="navSignIn" href="index.html">Sign In</a>
+      <a class="btn btn-ghost" id="navRegister" href="register.html">Register</a>
+      <button class="btn btn-ghost" id="navLogout" type="button" style="display:none;">Logout</button>
+      <a class="btn btn-primary" href="inventory.html">Browse</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section-sm">
+    <div class="container">
+      <h1 style="margin:0; font-size:44px; font-weight:950;">Inventory</h1>
+      <p class="section-subtitle" style="text-align:left; margin:10px 0 0;">Search by make, model, year, or VIN. Click a car to view details and reviews.</p>
+
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <input id="searchInput" class="input" style="width:min(520px, 100%);" placeholder="Search: make, model, year, VIN…">
+          <select id="sortSelect">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="price_asc">Price: Low → High</option>
+            <option value="price_desc">Price: High → Low</option>
+            <option value="year_desc">Year: New → Old</option>
+            <option value="miles_asc">Mileage: Low → High</option>
+          </select>
+        </div>
+        <div class="toolbar-right">
+          <a class="btn btn-ghost" href="dealer.html">Dealer dashboard</a>
+        </div>
+      </div>
+
+      <div class="detail-card" style="margin-top:14px;">
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:flex-end;">
+          <div>
+            <div class="pill">API lookup</div>
+            <div style="font-weight:950; margin-top:8px;">VIN Decoder (NHTSA)</div>
+            <div class="small">Enter any VIN to fetch make/model/year (demo for API lookup requirement).</div>
+          </div>
+          <form id="vinForm" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+            <input id="vinInput" class="input" placeholder="Enter VIN…" style="width:280px;">
+            <button class="btn btn-primary" type="submit">Decode</button>
+          </form>
+        </div>
+        <div class="msg" id="vinMsg" style="margin-top:12px;"></div>
+      </div>
+
+      <div id="carsGrid" class="cars-grid"></div>
+    </div>
+  </section>
+</main>
+
+<script src="inventory.js"></script>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo.png" alt="AutoMarket logo">
+        <div>
+          <div style="font-weight:950;">AutoMarket</div>
+          <div class="small">© AutoMarket. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="home.html">Home</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="financing.html">Financing</a>
+      <a href="home.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <span class="small">X</span>
+      <span class="small">IG</span>
+      <span class="small">YT</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
